@@ -30,7 +30,7 @@ function evaluate(page, func) {
  */
 var getHeader = function getHeader(args) {
 	var header = args[1];
-	var headerContent = header.substring(header.indexOf(':') + 1);
+	var headerContent = header.substring(header.indexOf('#:#') + 3);
 
 	return headerContent;
 };
@@ -44,7 +44,7 @@ var getHeader = function getHeader(args) {
  */
 var getAuthor = function getAuthor(args) {
 	var author = args[2];
-	var authorContent = author.substring(author.indexOf(':') + 1);
+	var authorContent = author.substring(author.indexOf('#:#') + 3);
 
 	return authorContent;
 };
@@ -58,8 +58,8 @@ var getAuthor = function getAuthor(args) {
  */
 var getParagraphs = function getParagraphs(args) {
 	var paragraphs = args[3];
-	var paragraphsContent = paragraphs.substring(paragraphs.indexOf(':') + 1);
-	var paragraphsContentSplited = paragraphsContent.split('|');
+	var paragraphsContent = paragraphs.substring(paragraphs.indexOf('#:#') + 3);
+	var paragraphsContentSplited = paragraphsContent.split('#|#');
 
 	return paragraphsContentSplited;
 };

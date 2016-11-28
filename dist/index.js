@@ -220,9 +220,9 @@ var TelegraphPost = function () {
 			var phantomJs = path.join(__dirname, '../node_modules/phantomjs-prebuilt/bin/phantomjs');
 			var postPublisher = path.join(__dirname, 'postpublisher.js');
 
-			var header = 'header:' + this._header;
-			var author = 'author:' + this._author;
-			var paragraphs = 'paragraphs:' + this._paragraphs.join('|');
+			var header = 'header#:#' + this._header;
+			var author = 'author#:#' + this._author;
+			var paragraphs = 'paragraphs#:#' + this._paragraphs.join('#|#');
 
 			var phantomjs = spawn(phantomJs, [postPublisher, header, author, paragraphs]);
 

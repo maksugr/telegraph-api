@@ -28,7 +28,7 @@ function evaluate(page, func) {
  */
 const getHeader = args => {
 	const header = args[1];
-	const headerContent = header.substring(header.indexOf(':') + 1);
+	const headerContent = header.substring(header.indexOf('#:#') + 3);
 
 	return headerContent;
 }
@@ -42,7 +42,7 @@ const getHeader = args => {
  */
 const getAuthor = args => {
 	const author = args[2];
-	const authorContent = author.substring(author.indexOf(':') + 1);
+	const authorContent = author.substring(author.indexOf('#:#') + 3);
 
 	return authorContent;
 }
@@ -56,8 +56,8 @@ const getAuthor = args => {
  */
 const getParagraphs = args => {
 	const paragraphs = args[3];
-	const paragraphsContent = paragraphs.substring(paragraphs.indexOf(':') + 1);
-	const paragraphsContentSplited = paragraphsContent.split('|');
+	const paragraphsContent = paragraphs.substring(paragraphs.indexOf('#:#') + 3);
+	const paragraphsContentSplited = paragraphsContent.split('#|#');
 
 	return paragraphsContentSplited;
 }

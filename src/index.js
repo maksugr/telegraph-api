@@ -169,9 +169,9 @@ class TelegraphPost {
 		const phantomJs = path.join(__dirname, '../node_modules/phantomjs-prebuilt/bin/phantomjs');
 		const postPublisher = path.join(__dirname, 'postpublisher.js');
 
-		const header = `header:${this._header}`;
-		const author = `author:${this._author}`;
-		const paragraphs = `paragraphs:${this._paragraphs.join('|')}`;
+		const header = `header#:#${this._header}`;
+		const author = `author#:#${this._author}`;
+		const paragraphs = `paragraphs#:#${this._paragraphs.join('#|#')}`;
 
 		const phantomjs = spawn(phantomJs, [postPublisher, header, author, paragraphs]);
 
