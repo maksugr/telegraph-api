@@ -166,7 +166,7 @@ class TelegraphPost {
 
 		this._url = '';
 
-		const phantomJs = path.join(__dirname, '../node_modules/phantomjs-prebuilt/bin/phantomjs');
+		const phantomJs = path.join(__dirname, '/../../phantomjs-prebuilt/bin/phantomjs');
 		const postPublisher = path.join(__dirname, 'postpublisher.js');
 
 		const header = `header#:#${this._header}`;
